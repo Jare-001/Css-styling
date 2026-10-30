@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow | Study Smarter</title>
+
+  <!-- CSS framework: Bootstrap (used for buttons and card styling) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ---------- Base styles ---------- */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- Header / Navigation (Flexbox) ---------- */
+    .header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #4f46e5;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1f2937;
+    }
+
+    .nav-links a:hover {
+      color: #4f46e5;
+    }
+
+    /* ---------- Hero (Flexbox) ---------- */
+    .hero {
+      background-color: #eef2ff;
+      padding: 4rem 0;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0 0 1rem;
+      color: #312e81;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 1rem;
+    }
+
+    /* ---------- Features (Grid) ---------- */
+    .features {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      color: #312e81;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .feature-card {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      background-color: #312e81;
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">FocusFlow</div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="about">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Study smarter, not harder</h1>
+        <p>FocusFlow helps students plan their day, stay focused, and track their progress, all in one simple app.</p>
+        <a href="#features" class="btn btn-primary btn-lg">Get Started</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://placehold.co/500x350/c7d2fe/312e81?text=FocusFlow+App" alt="FocusFlow app preview">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Why students love FocusFlow</h2>
+      <div class="features-grid">
+
+        <!-- Bootstrap card classes used here -->
+        <div class="card feature-card shadow-sm">
+          <div class="feature-icon">📅</div>
+          <h3>Smart Planner</h3>
+          <p>Organize your classes, tasks, and deadlines in one place.</p>
+        </div>
+
+        <div class="card feature-card shadow-sm">
+          <div class="feature-icon">⏱️</div>
+          <h3>Focus Timer</h3>
+          <p>Study in short sessions with breaks to keep your mind fresh.</p>
+        </div>
+
+        <div class="card feature-card shadow-sm">
+          <div class="feature-icon">📈</div>
+          <h3>Progress Tracker</h3>
+          <p>See how much you have studied and celebrate your wins.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <p>&copy; 2026 FocusFlow. All rights reserved.</p>
+      <p>Contact: hello@focusflow.com</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+<!--AI assistant review.
+I asked an AI assistant to review my CSS, and it suggested making the hero heading size fluid instead of using fixed sizes in different media queries. I replaced font-size: 2.5rem; in .hero h1 with font-size: clamp(2rem, 5vw, 3.5rem);. Now the heading scales smoothly with the screen width, so the page looks better on every device.-->
